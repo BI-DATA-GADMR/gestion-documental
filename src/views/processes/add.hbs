@@ -1,0 +1,312 @@
+<div class="container p-1 mb-5 mt-5">
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+
+                <div class="card w-100">
+                    <div class="card-body">
+                        
+                        <form class="row g-3 needs-validation" id="ProductDetails" onsubmit="handleFormSubmit(this)">
+
+                          <div id="message"></div>
+                          <div class="container p-1">
+                            <h4 class="title text-center">
+                                Registro de PAC
+                            </h4>
+                          </div>
+                          <div class="row g-2">
+                                <div class="col-md">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" name="codigo" id="codigo" class="form-control"
+                                            placeholder="codigo" style="display: none">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-2">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating mb-3">
+                                        <select name="subproceso" class="form-select" id="subproceso"
+                                            aria-label="Floating label select example">
+                                            <option value="PROYECTOS DE INFRAESTRUCTURAE" selected>PROYECTOS DE INFRAESTRUCTURA</option>
+                                            <option value="DESARROLLO RURAL INTEGRAL">DESARROLLO RURAL INTEGRAL</option>
+                                            <option value="OBRAS DE INFRAESTRUCTURA">OBRAS DE INFRAESTRUCTURA</option>
+                                            <option value="MANTENIMIENTO VIAL">MANTENIMIENTO VIAL</option>
+                                        </select>
+                                        <label for="subproceso">Subproceso</label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating mb-3">
+                                        <select name="programa" class="form-select" id="programa"
+                                            aria-label="Floating label select example">
+                                            <option value="INTERVENCIÓN Y EJECUCIÓN DE OBRA PÚBLICA EN EL CANTÓN RIOBAMBA" selected>INTERVENCIÓN Y EJECUCIÓN DE OBRA PÚBLICA EN EL CANTÓN RIOBAMBA</option>
+                                        </select>
+                                        <label for="programa">Programa</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-2">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating mb-3">
+                                        <select name="eje" class="form-select" id="eje"
+                                            aria-label="Floating label select example">
+                                            <option value="ASENTAMIENTOS HUMANOS, MOVILIDAD Y SEGURIDAD" selected>ASENTAMIENTOS HUMANOS, MOVILIDAD Y SEGURIDAD</option>
+                                        </select>
+                                        <label for="eje">Eje al que está alineado la dirección: </label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating mb-3">
+                                        <select name="objetivo" class="form-select" id="objetivo"
+                                            aria-label="Floating label select example">
+                                            <option value="ATENDER LAS NECESIDADES BÁSICAS INSATISFECHAS EN EL CANTÓN RIOBAMBA, PARA MEJORAR LA CALIDAD DE VIDA" selected> ATENDER LAS NECESIDADES BÁSICAS INSATISFECHAS EN EL CANTÓN RIOBAMBA, PARA MEJORAR LA CALIDAD DE VIDA</option>
+                                        </select>
+                                        <label for="objetivo">Objetivo</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-2">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating mb-3">
+                                        <select name="proyecto" class="form-select" id="proyecto"
+                                            aria-label="Floating label select example">
+                                            <option value="PROYECTO 1 MANTENIMIENTO Y REPARACION DE VIAS URBANAS" selected>INFRAESTRUCTURA DIGITAL</option>
+                                            <option value="PROYECTO 2 CONSTRUCCION Y MEJORAMIENTO DE ESPACIOS RECREATIVOS, DEPORTIVOS Y CULTURALES N-01-PR2-PY10">PROYECTO 2 CONSTRUCCION Y MEJORAMIENTO DE ESPACIOS RECREATIVOS, DEPORTIVOS Y CULTURALES N-01-PR2-PY10</option>
+                                            <option value="PROYECTO 3 CONSTRUCCION Y MEJORAMIENTO DE INFRAESTRUCTURA FISICA CANTONAL - SIN CODIGO">PROYECTO 3 CONSTRUCCION Y MEJORAMIENTO DE INFRAESTRUCTURA FISICA CANTONAL - SIN CODIGO</option>
+                                            <option value="PROYECTO 4 DOTACION DE INFRAESTRUCTURA HIDROSANITARIA PARA EL CANTON RIOBAMBA L-01-PR2-PY101">PROYECTO 4 DOTACION DE INFRAESTRUCTURA HIDROSANITARIA PARA EL CANTON RIOBAMBA L-01-PR2-PY101</option>
+                                            <option value="PROYECTO 5 FORTALECIMIENTO Y DESARROLLO DE PARROQUIAS RURALES SIN CODIGO">PROYECTO 5 FORTALECIMIENTO Y DESARROLLO DE PARROQUIAS RURALES SIN CODIGO</option>
+                                        </select>
+                                        <label for="proyecto">Proyecto</label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating mb-3">
+                                        <input type="number" name="ano" id="ano" class="form-control" placeholder="">
+                                        <label for="floatingInput">Año</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-2">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" name="partidaPresupuestaria" id="partidaPresupuestaria" class="form-control"
+                                            placeholder="Partida presupuestaria">
+                                        <label for="floatingInput">Partida presupuestaria</label>
+                                        <div class="valid-feedback" id="mensaje-partidaPresupuestaria">
+                                            ¡Se ve bien!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" name="cpc" id="cpc" class="form-control" placeholder="CPC">
+                                        <label for="cpc">Código CPC</label>
+                                        <div class="valid-feedback" id="mensaje-cpc">
+                                            ¡Se ve bien!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-2">
+
+                                <div class="col-md">
+                                    <div class="form-floating mb-3">
+                                        <textarea name="detalle" class="form-control" placeholder="Detalle del producto"
+                                            id="detalle" style="height: 120px"></textarea>
+                                        <label for="detalle">Detalle del producto</label>
+                                    </div>
+                                </div>
+
+                                <!--<div class="col-md">
+                                    <div class="form-check">
+                                        <h5>Cuatrimestre</h5>
+                                        <div class="form-check-C1">
+                                            <input class="form-check-input" type="checkbox" value="" id="cuatrimestre1" name="cuatrimestre1" >
+                                            <label class=" form-check-label" for="cuatrimestre1">
+                                            Cuatrimestre 1
+                                            </label>
+                                        </div>
+                                        <div class="form-check-C2">
+                                            <input class="form-check-input" type="checkbox" value="" name="cuatrimestre2" id="cuatrimestre2">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Cuatrimestre 2
+                                            </label>
+                                        </div>
+                                        <div class="form-check-C3">
+                                            <input class="form-check-input" type="checkbox" value="" name="cuatrimestre3" id="cuatrimestre3">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Cuatrimestre 3
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>-->
+                            </div>
+
+                            <div class="row g-2">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating mb-3">
+                                        <input type="number" name="cantidadAnual" id="cantidadAnual" class="form-control"
+                                            placeholder="Cantidad anual">
+                                        <label for="cantidadAnual">Cantidad Anual</label>
+                                        <div class="valid-feedback" id="mensaje-cantidadAnual">
+                                            ¡Se ve bien!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating mb-3">
+                                        <select name="unidad" class="form-select" id="unidad"
+                                            aria-label="Floating label select example">
+                                            <option value="UNIDAD" selected>UNIDAD</option>
+                                            <option value="LITRO">LITRO</option>
+                                            <option value="GALON">GALON</option>
+                                            <option value="METRO">METRO</option>
+                                            <option value="CAJA">CAJA</option>
+                                            <option value="BOLSA">BOLSA</option>
+                                        </select>
+                                        <label for="unidad">Unidad</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row g-2">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating mb-3">
+                                        <input type="number" name="costoUnitario" id="costoUnitario" class="form-control"
+                                            placeholder="Cantidad anual">
+                                        <label for="costoUnitario">Costo Unitario</label>
+                                        <div class="valid-feedback" id="mensaje-costoUnitario">
+                                            ¡Se ve bien!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md mb-3">
+                                    <div class="form-floating mb-3">
+                                        <select name="tipoCompra" class="form-select" id="tipoCompra"
+                                            aria-label="Floating label select example">
+                                            <option value="BIEN" selected>BIEN</option>
+                                            <option value="SERVICIO">SERVICIO</option>
+                                            <option value="CONSULTORIA">CONSULTORIA</option>
+                                            <option value="OBRA">OBRA</option>
+                                        </select>
+                                        <label for="tipoCompra">Tipo de compra</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-2">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating mb-3">
+                                        <select name="normalizado" class="form-select" id="normalizado"
+                                            aria-label="Floating label select example">
+                                            <option value="NORMALIZADO" selected>NORMALIZADO</option>
+                                            <option value="NO NORMALIZADO">NO NORMALIZADO</option>
+                                        </select>
+                                        <label for="normalizado">Tipo de producto</label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating mb-3">
+                                        <select name="catalogo" class="form-select" id="catalogo"
+                                            aria-label="Floating label select example">
+                                            <option value="NO" selected>NO</option>
+                                            <option value="SI">SI</option>
+                                        </select>
+                                        <label for="catalogo">Catálogo electrónico</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-2">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating mb-3">
+                                        <select name="bid" class="form-select" id="bid"
+                                            aria-label="Floating label select example">
+                                            <option value="NO" selected>NO</option>
+                                            <option value="SI">SI</option>
+                                        </select>
+                                        <label for="bid">Fondos BID:</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-2">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" name="operacionBID" id="operacionBID" class="form-control"
+                                            placeholder="Codigo de operacion BID">
+                                        <label for="operacionBID">Código de operacion BID</label>
+                                        <div class="valid-feedback" id="mensaje-operacionBID">
+                                            ¡Se ve bien!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" name="proyectoBID" id="proyectoBID" class="form-control" placeholder="Codigo de proyecto BID">
+                                        <label for="proyectoBID">Código de proyecto BID</label>
+                                        <div class="valid-feedback" id="mensaje-proyectoBID">
+                                            ¡Se ve bien!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-2">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating mb-3">
+                                        <select name="regimen" class="form-select" id="regimen"
+                                            aria-label="Floating label select example">
+                                            <option value="COMUN" selected>COMUN</option>
+                                            <option value="ESPECIAL">ESPECIAL</option>
+                                        </select>
+                                        <label for="regimen">Tipo de régimen</label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating mb-3">
+                                        <select name="presupuesto" class="form-select" id="presupuesto"
+                                            aria-label="Floating label select example">
+                                            <option value="PROYECTO DE INVERSION" selected>PROYECTO DE INVERSION
+                                            </option>
+                                            <option value="GASTO CORRIENTE">GASTO CORRIENTE</option>
+                                        </select>
+                                        <label for="presupuesto">Tipo de presupuesto</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--<div class="row g-2">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating mb-3">
+                                        <select name="procesoSugerido" class="form-select" id="procesoSugerido"
+                                            aria-label="Floating label select example">
+                                            
+                                        </select>
+                                        <label for="procesoSugerido"> Proceso sugerido:</label>
+                                    </div>
+                                </div>
+                            </div>-->
+
+                            <div class="row g-2">
+                                <div class="col-md">
+                                    <div class="form-group p-3">
+                                        <button id="boton" type="submit" class="btn btn-success btn-block w-100"
+                                            id="boton">
+                                            Siguiente
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
